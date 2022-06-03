@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:orientation="vertical"
+        tools:context=".activitys.dashboard.pricecals.PriceCalculatorActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_included" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingRight="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/start_location"
+                        android:textColor="@color/view_black" />
+
+
+                    <EditText
+                        android:id="@+id/edtStartLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/field_border"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/ic_ph_location"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:focusable="false"
+                        android:textColorHint="@color/view_grey2"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="@string/enter_start_location"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/view_black"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/destination"
+                        android:textColor="@color/view_black" />
+
+
+                    <EditText
+                        android:id="@+id/edtDestination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/field_border"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/ic_ph_location"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:focusable="false"
+                        android:textColorHint="@color/view_grey2"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="@string/enter_destination_location"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/view_black"
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:src="@drawable/ic_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/add_another_destination_point"
+                        android:textColor="@color/view_black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/optional"
+                        android:textColor="@color/view_black"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="italic" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/calculation_type"
+                        android:textColor="@color/view_black" />
+
+
+                    <LinearLayout
+                        android:id="@+id/llAutometicCalc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/field_border"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:padding="@dimen/_10ssp">
+
+                        <RadioButton
+                            android:id="@+id/rdtAuto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/view_main_color"
+                            android:checked="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:minHeight="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/automatic_order" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_30sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/if_more_than_one"
+                            android:textColor="@color/view_grey"
+                            android:textSize="@dimen/_9ssp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llManualCalc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/field_border"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10ssp">
+
+                        <RadioButton
+                            android:id="@+id/rdtManual"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/view_main_color"
+
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:minHeight="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/manual_order" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_30sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/manualy_choose"
+                            android:textColor="@color/view_grey"
+                            android:textSize="@dimen/_9ssp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_7sdp"
+                            android:background="@drawable/field_border">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_10sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:includeFontPadding="false"
+                                    android:text="@string/chf"
+                                    android:textColor="@color/view_grey" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:fontFamily="@font/poppins_semi_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="7.00"
+                                    android:textColor="@color/view_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width=".5dp"
+                                    android:layout_height="match_parent"
+
+                                    android:background="@color/view_grey6" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".5"
+                                        android:src="@drawable/ic_drop_up_arrow"
+                                        app:tint="@color/view_black" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height=".5dp"
+                                        android:background="@color/view_grey6" />
+
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".5"
+                                        android:rotation="180"
+                                        android:src="@drawable/ic_drop_up_arrow"
+                                        app:tint="@color/view_black" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="@drawable/btn_border"
+                    android:backgroundTint="@color/view_main_color"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/calculate_price"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/border002"
+        android:padding="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/txtPaymentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/ic_menu"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="@dimen/_minus2sdp"
+            android:text="Taxi Trip"
+            android:textColor="@color/view_black"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <ImageView
+            android:id="@+id/ic_menu"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_menu" />
+
+    </RelativeLayout>
+</layout>

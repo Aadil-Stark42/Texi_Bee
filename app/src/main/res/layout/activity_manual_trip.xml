@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:orientation="vertical"
+
+        tools:context=".activitys.dashboard.manuatrip.ManualTripActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_included" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:background="@drawable/field_border"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/driver_name"
+                            android:textColor="@color/view_grey"
+                            android:textSize="@dimen/_11ssp" />
+
+                        <TextView
+                            android:id="@+id/txtDriverName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:includeFontPadding="false"
+                            android:text="Otto Seidel"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_11ssp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/car_details"
+                            android:textColor="@color/view_black" />
+
+                        <RelativeLayout
+                            android:id="@+id/rltvCarSelect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:background="@drawable/field_border"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/txtCarDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/img_down_arrow"
+                                android:fontFamily="@font/poppins_regular"
+                                android:hint="@string/select_car"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/view_grey"
+                                android:textSize="@dimen/_12ssp" />
+
+
+                            <ImageView
+
+                                android:id="@+id/img_down_arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:src="@drawable/ic_down_arrow" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/trip_type"
+                            android:textColor="@color/view_black" />
+
+                        <RadioGroup
+                            android:id="@+id/rdTripGrp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <RadioButton
+                                android:id="@+id/rdTexi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/field_border"
+                                android:button="@drawable/radio_button_inset"
+                                android:buttonTint="@color/view_main_color"
+
+                                android:padding="@dimen/_11ssp"
+                                android:text="@string/taxi_trip" />
+
+
+                            <RadioButton
+                                android:id="@+id/rdFailed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:background="@drawable/field_border"
+                                android:button="@drawable/radio_button_inset"
+                                android:buttonTint="@color/view_main_color"
+                                android:padding="@dimen/_11ssp"
+                                android:text="@string/failed_trip" />
+
+                            <RadioButton
+                                android:id="@+id/rdEmpty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:background="@drawable/field_border"
+                                android:button="@drawable/radio_button_inset"
+                                android:buttonTint="@color/view_main_color"
+                                android:padding="@dimen/_11ssp"
+                                android:text="@string/empty_trip" />
+
+                            <RadioButton
+                                android:id="@+id/rdPrivate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:background="@drawable/field_border"
+                                android:button="@drawable/radio_button_inset"
+                                android:buttonTint="@color/view_main_color"
+                                android:padding="@dimen/_11ssp"
+                                android:text="@string/private_trip" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/start_location"
+                            android:textColor="@color/view_black" />
+
+
+                        <EditText
+                            android:id="@+id/edtStartLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:background="@drawable/field_border"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:textColorHint="@color/view_grey2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/enter_start_location"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/destination"
+                            android:textColor="@color/view_black" />
+
+
+                        <EditText
+                            android:id="@+id/edtDestination"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:background="@drawable/field_border"
+                            android:clickable="false"
+                            android:textColorHint="@color/view_grey2"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/enter_destination_location"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/start_km"
+                            android:textColor="@color/view_black" />
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:background="@drawable/field_border"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:textColorHint="@color/view_grey2"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:hint="@string/enter_destination_location"
+                            android:padding="@dimen/_10sdp"
+                            android:text="0 Km"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/destination_km_"
+                            android:textColor="@color/view_black" />
+
+
+                        <EditText
+                            android:id="@+id/edtDestinationKm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:background="@drawable/field_border"
+                            android:clickable="false"
+                            android:textColorHint="@color/view_grey2"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/enter_destination_km"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/traveled_km"
+                            android:textColor="@color/view_black" />
+
+
+                        <EditText
+                            android:id="@+id/edtTraveledKm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:background="@drawable/field_border"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:textColorHint="@color/view_grey2"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:hint="@string/enter_destination_location"
+                            android:padding="@dimen/_10sdp"
+                            android:text="0 Km"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/date"
+                            android:textColor="@color/view_black" />
+
+
+                        <EditText
+                            android:id="@+id/edtDatepicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:background="@drawable/field_border"
+                            android:clickable="false"
+                            android:textColorHint="@color/view_grey2"
+                            android:drawableRight="@drawable/ic_calander"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/dd_mm_yyyy"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_weight=".5"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/start_time"
+                                android:textColor="@color/view_black" />
+
+
+                            <EditText
+                                android:id="@+id/edtStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_2sdp"
+                                android:background="@drawable/field_border"
+                                android:clickable="false"
+
+                                android:textColorHint="@color/view_grey2"
+                                android:drawableRight="@drawable/ic_clock"
+                                android:drawablePadding="@dimen/_7sdp"
+                                android:focusable="false"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:hint="@string/_00_00"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/view_black"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_weight=".5"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"
+                                android:text="@string/end_time"
+                                android:textColor="@color/view_black" />
+
+
+                            <EditText
+                                android:id="@+id/edtEndTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_2sdp"
+                                android:background="@drawable/field_border"
+                                android:clickable="false"
+                                android:textColorHint="@color/view_grey2"
+                                android:drawableRight="@drawable/ic_clock"
+                                android:drawablePadding="@dimen/_7sdp"
+                                android:focusable="false"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:hint="@string/_00_00"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/view_black"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/fare"
+                            android:textColor="@color/view_black" />
+
+
+                        <EditText
+                            android:id="@+id/edtFare"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_2sdp"
+                            android:background="@drawable/field_border"
+                            android:digits="1234567890."
+                            android:textColorHint="@color/view_grey2"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/enter_fare"
+                            android:inputType="numberDecimal"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/view_black"
+                            android:textSize="@dimen/_12ssp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/payment_method"
+                            android:textColor="@color/view_black" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_2sdp">
+
+                            <RadioButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/field_border"
+                                android:button="@drawable/radio_button_inset"
+                                android:buttonTint="@color/view_main_color"
+                                android:checked="true"
+                                android:padding="@dimen/_11ssp"
+                                android:text="@string/cash" />
+
+                            <RadioButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:background="@drawable/field_border"
+                                android:button="@drawable/radio_button_inset"
+                                android:buttonTint="@color/view_main_color"
+                                android:padding="@dimen/_11ssp"
+                                android:text="@string/upi"
+                                android:visibility="gone" />
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_10ssp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnCancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_border"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/cancel"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSave"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_border"
+                            android:backgroundTint="@color/view_main_color"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:includeFontPadding="false"
+                            android:text="@string/save_trip_details"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_135sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="@dimen/_5sdp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RvCarDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

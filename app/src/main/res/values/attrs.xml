@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GradientTextView">
+        <attr name="gt_color_list" format="reference" />
+        <attr name="gt_gradient_direction" format="enum">
+            <enum name="left" value="0" />
+            <enum name="up" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+        <attr name="gt_gradient_angle" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="AnimatedRecyclerView">
+        <attr name="layoutAnimation" format="reference" />
+        <attr name="animationDuration" format="integer" />
+        <attr name="layoutManagerOrientation" format="integer">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="layoutManagerReverse" format="boolean" />
+        <attr name="layoutManagerType" format="integer">
+            <enum name="linear" value="0" />
+            <enum name="grid" value="1" />
+        </attr>
+        <attr name="gridLayoutManagerColumns" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+
+        <attr name="civ_border_width" format="dimension" />
+
+        <attr name="civ_border_color" format="color" />
+
+        <attr name="civ_border_overlay" format="boolean" />
+
+        <attr name="civ_circle_background_color" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+
+        <attr name="riv_corner_radius" format="dimension" />
+
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+
+        <attr name="riv_border_width" format="dimension" />
+
+        <attr name="riv_border_color" format="color" />
+
+        <attr name="riv_mutate_background" format="boolean" />
+
+        <attr name="riv_oval" format="boolean" />
+
+        <attr name="android:scaleType" />
+
+        <attr name="riv_tile_mode">
+
+            <enum name="clamp" value="0" />
+
+            <enum name="repeat" value="1" />
+
+            <enum name="mirror" value="2" />
+
+        </attr>
+        <attr name="riv_tile_mode_x">
+
+            <enum name="clamp" value="0" />
+
+            <enum name="repeat" value="1" />
+
+            <enum name="mirror" value="2" />
+
+        </attr>
+
+        <attr name="riv_tile_mode_y">
+
+            <enum name="clamp" value="0" />
+
+            <enum name="repeat" value="1" />
+
+            <enum name="mirror" value="2" />
+
+        </attr>
+
+    </declare-styleable>
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="Rotate3dAnimation">
+
+
+        <attr name="rollType" format="enum">
+
+            <enum name="x" value="0" />
+
+            <enum name="y" value="1" />
+
+            <enum name="z" value="2" />
+
+        </attr>
+
+        <attr name="fromDeg" format="float" />
+
+        <attr name="toDeg" format="float" />
+
+        <attr name="pivotX" format="fraction" />
+
+        <attr name="pivotY" format="fraction" />
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="titlegrediant">
+        <item>#3F4D58</item>
+        <item>#903F4D58</item>
+        <item>#3F4D5880</item>
+     </array>
+
+</resources>

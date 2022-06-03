@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/_10sdp"
+         android:background="@drawable/field_border"
+        android:padding="@dimen/_5sdp">
+
+
+        <com.mindnotix.texibee.views.roundedimage.RoundedImageView
+            android:id="@+id/imgcar"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:src="@drawable/tempcar"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/_5sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/ic_menu"
+            android:layout_toRightOf="@+id/imgcar"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtCarName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="@dimen/_minus2sdp"
+                android:text="WOK RM 8426"
+                android:textColor="@color/view_black"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:id="@+id/txtCarModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="@dimen/_minus2sdp"
+                android:text="Mercedes-Benz"
+                android:textColor="@color/view_black"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/txtCarNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="@dimen/_minus2sdp"
+                android:text="W212 E-class"
+                android:textColor="@color/view_black"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ic_menu"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu" />
+
+    </RelativeLayout>
+
+</layout>

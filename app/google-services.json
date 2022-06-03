@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "267329142868",
+    "project_id": "texi-bee",
+    "storage_bucket": "texi-bee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267329142868:android:f95fb9bbe8ce3e709f2dc1",
+        "android_client_info": {
+          "package_name": "com.mindnotix.texibee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267329142868-jt20klf7s30i5qbofk7rt3pfbpghnb5u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mindnotix.texibee",
+            "certificate_hash": "cc8f8910109a8af52734b1c5fb2662211dbde829"
+          }
+        },
+        {
+          "client_id": "267329142868-amqmehgbbfeih592d0d0fd1ul7at3rub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl0K_C8eBrXkjgO4HgcRKqHsB3nGBYibc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267329142868-amqmehgbbfeih592d0d0fd1ul7at3rub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,167 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CityBee" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.AppCompat.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Animations" />
+
+    <!-- PopDownMenu -->
+
+
+    <style name="Animations.PopDownMenu" />
+
+
+    <style name="Animations.PopDownMenu.Center">
+
+        <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+
+    </style>
+
+
+    <style name="Animations.PopDownMenu.Left">
+
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+
+    </style>
+
+
+    <style name="Animations.PopDownMenu.Right">
+
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+
+    </style>
+
+
+    <style name="Animations.PopDownMenu.Reflect">
+
+        <item name="@android:windowEnterAnimation">@anim/pump_top</item>
+
+        <item name="@android:windowExitAnimation">@anim/disappear</item>
+
+    </style>
+
+    <!-- PopUpMenu -->
+
+
+    <style name="Animations.PopUpMenu" />
+
+
+    <style name="Animations.PopUpMenu.Center">
+
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+
+    </style>
+
+
+    <style name="Animations.PopUpMenu.Left">
+
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+
+    </style>
+
+
+    <style name="Animations.PopUpMenu.Right">
+
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+
+    </style>
+
+
+    <style name="Animations.PopUpMenu.Reflect">
+
+        <item name="@android:windowEnterAnimation">@anim/pump_bottom</item>
+
+        <item name="@android:windowExitAnimation">@anim/disappear</item>
+
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="PermissionXDefaultDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:windowIsTranslucent">false</item>
+
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowBackground">@color/float_transparent</item>
+
+        <item name="android:windowAnimationStyle">@null</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:backgroundDimAmount">0.4</item>
+
+    </style>
+     <style parent="android:Widget.Button" name="dialog_blue_button">
+
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">31dp</item>
+
+    <item name="android:background">@drawable/blue_button_background</item>
+
+    <item name="android:textSize">14sp</item>
+
+    <item name="android:paddingLeft">21dp</item>
+
+    <item name="android:paddingRight">21dp</item>
+
+    <item name="android:textColor">@color/button_text_color</item>
+
+</style>
+</resources>
